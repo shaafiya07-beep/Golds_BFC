@@ -710,22 +710,6 @@ img {
     flex-direction: column;
   }
 
-  .offer-ticker {
-  top: 88px;
-  width: calc(100% - 24px);
-  height: 40px;
-}
-
-.ticker-track span {
-  font-size: 13px;
-  padding: 0 28px;
-}
-
-.menu-wrapper {
-  margin-top: 195px;
-  padding-top: 30px;
-}
-
   .nav-links.show {
     display: flex;
   }
@@ -738,13 +722,65 @@ img {
     display: none;
   }
 
+  .offer-ticker {
+    top: 88px;
+    width: calc(100% - 24px);
+    height: 40px;
+  }
+
+  .ticker-track span {
+    font-size: 13px;
+    padding: 0 28px;
+  }
+
   .menu-wrapper {
     width: calc(100% - 20px);
-    margin-top: 100px;
+    margin-top: 195px;
+    padding-top: 30px;
   }
 
   .food-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .food-card {
+    padding: 10px;
+  }
+
+  .food-card img {
+    height: 105px;
+  }
+
+  .food-card h3 {
+    font-size: 14px;
+  }
+
+  .food-card p {
+    font-size: 11px;
+    min-height: 30px;
+  }
+
+  .food-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .food-bottom small {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .add-btn {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .qty-control {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .footer {
@@ -765,7 +801,8 @@ img {
 
 @media (max-width: 560px) {
   .food-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .search-box {
@@ -795,7 +832,6 @@ img {
 .no-results p {
   color: var(--muted);
 }
-
 
 .menu-loader {
   grid-column: 1 / -1;
