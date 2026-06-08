@@ -22,7 +22,8 @@ const locationStatus = document.getElementById("locationStatus");
 const locationSearch = document.getElementById("locationSearch");
 const searchLocationBtn = document.getElementById("searchLocationBtn");
 
-const BFC_WHATSAPP_PHONE = "919392224164";
+const BFC_WHATSAPP_PHONE = "918309073135";
+const DELIVERY_CHARGE = 30;
 
 let deliveryMap = null;
 let deliveryMarker = null;
@@ -38,26 +39,7 @@ if (hamburger && navLinks) {
 
 function openMapModal() {
   mapModal.classList.add("show");
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      position => {
-        selectedLat = position.coords.latitude;
-        selectedLng = position.coords.longitude;
-        loadMap();
-      },
-      () => {
-        loadMap();
-      },
-      {
-        enableHighAccuracy: true,
-        timeout: 8000,
-        maximumAge: 0
-      }
-    );
-  } else {
-    loadMap();
-  }
+  loadMap();
 }
 
 function loadMap() {
@@ -200,6 +182,14 @@ if (mapModal) {
   });
 }
 
+function getFinalTotal() {
+  const foodTotal = getCartTotal();
+
+  if (foodTotal <= 0) return 0;
+
+  return foodTotal + DELIVERY_CHARGE;
+}
+
 function renderCheckout() {
   const cart = getCart();
 
@@ -227,7 +217,15 @@ function renderCheckout() {
     </div>
   `).join("");
 
-  summaryTotal.textContent = `₹${getCartTotal()}`;
+  summaryItems.innerHTML += `
+    <div class="summary-item">
+      <h3>Delivery Charge</h3>
+      <p>Fixed delivery fee</p>
+      <strong>₹${DELIVERY_CHARGE}</strong>
+    </div>
+  `;
+
+  summaryTotal.textContent = `₹${getFinalTotal()}`;
   updateCartCount();
 }
 
@@ -301,9 +299,17 @@ Order Items:
 
 ${orderItems}
 
-Total:
+Food Total:
 
 ₹${getCartTotal()}
+
+Delivery Charge:
+
+₹${DELIVERY_CHARGE}
+
+Grand Total:
+
+₹${getFinalTotal()}
 
 Payment:
 
