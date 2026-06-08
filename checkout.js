@@ -39,7 +39,39 @@ if (hamburger && navLinks) {
 
 function openMapModal() {
   mapModal.classList.add("show");
-  loadMap();
+
+  if (navigator.geolocation) {
+    locationStatus.textContent = "Trying to open your current location...";
+    locationStatus.className = "location-status";
+
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        selectedLat = position.coords.latitude;
+        selectedLng = position.coords.longitude;
+
+        loadMap();
+
+        locationStatus.textContent = "Map opened near your current location. Drag pin if needed.";
+        locationStatus.className = "location-status success";
+      },
+      error => {
+        loadMap();
+
+        locationStatus.textContent = "Could not get current location. Search your area and drag the pin.";
+        locationStatus.className = "location-status error";
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      }
+    );
+  } else {
+    loadMap();
+
+    locationStatus.textContent = "Location not supported. Search your area and drag the pin.";
+    locationStatus.className = "location-status error";
+  }
 }
 
 function loadMap() {
