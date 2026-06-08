@@ -1,0 +1,126 @@
+<!-- offers.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.F.C Offers</title>
+  <link rel="stylesheet" href="offers.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo4.png" alt="B.F.C Logo">
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html" class="active">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <a href="menu.html" class="order-btn">Order Now</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<main class="offers-page">
+
+  <section class="offers-hero">
+    <div>
+      <span class="deal-badge">🔥 Limited Deals</span>
+      <h1>Today's Gold's B.F.C Deals</h1>
+      <p>Save more on your favorite meals.</p>
+      <a href="#offersGrid" class="hero-btn">View Offers</a>
+    </div>
+
+    <img src="offers2.jpeg" alt="BFC Deals"  style="height: 300px;">
+  </section>
+
+  <section class="offers-section">
+    <h2>Special Offers</h2>
+    <div class="offers-grid" id="offersGrid"></div>
+  </section>
+
+  <section class="combo-builder">
+    <div class="combo-info">
+      <span>🍱 Custom Combo</span>
+      <h2>Build Your Combo</h2>
+      <p>Select your favorite chicken, pizza or burger, and an extra item.</p>
+    </div>
+
+    <div class="combo-box">
+      <div class="combo-step">
+        <label>Step 1: Select Chicken Item</label>
+        <select id="chickenSelect"></select>
+      </div>
+
+      <div class="combo-step">
+        <label>Step 2: Select Pizza / Burger</label>
+        <select id="mainSelect"></select>
+      </div>
+
+      <div class="combo-step">
+        <label>Step 3: Add Extra</label>
+        <select id="extraSelect"></select>
+      </div>
+
+      <div class="combo-total">
+        <span>Total</span>
+        <strong id="customComboTotal">₹0</strong>
+      </div>
+
+      <button class="custom-add-btn" id="addCustomComboBtn">Add Custom Combo</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <img src="logo4.png" alt="BFC Logo" style="width: 150px;">
+      <h3>B.F.C</h3>
+      <p>Bismillah Fried Chicken</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="offers.html">Offers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h4>Food Categories</h4>
+      <a href="menu.html?category=Fried%20Chicken">Fried Chicken</a>
+      <a href="menu.html?category=Pizza">Pizza</a>
+      <a href="menu.html?category=Burger">Burger</a>
+      <a href="menu.html?category=Sandwich">Sandwich</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>bfcrestaurant@gmail.com</p>
+      <p>+91 9392224164</p>
+      <div class="socials">
+        <span>f</span>
+        <span>𝕏</span>
+        <span>◎</span>
+        <span>▶</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script src="offers.js"></script>
+</body>
+</html>

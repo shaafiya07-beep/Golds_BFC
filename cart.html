@@ -1,0 +1,119 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.F.C Cart</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo4.png" alt="B.F.C Logo">
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <a href="menu.html" class="order-btn">Order Now</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<main class="cart-page">
+
+  <section class="cart-left">
+    <div class="cart-heading">
+      <h1>Your Cart</h1>
+      <p>Manage your selected B.F.C items.</p>
+    </div>
+
+    <div id="cartContainer" class="cart-container"></div>
+
+    <section class="recommended-section">
+      <h2>Add More</h2>
+      <div class="recommended-grid" id="recommendedGrid"></div>
+    </section>
+  </section>
+
+  <aside class="order-summary">
+    <h2>Order Summary</h2>
+
+    <div class="summary-row">
+      <span>Items Total</span>
+      <strong id="itemsTotal">₹0</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Number of Items</span>
+      <strong id="itemsCount">0</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <strong id="subtotal">₹0</strong>
+    </div>
+
+    <div class="summary-total">
+      <span>Total Amount</span>
+      <strong id="totalAmount">₹0</strong>
+    </div>
+
+    <a href="checkout.html" class="checkout-btn">Proceed To Checkout</a>
+    <a href="menu.html" class="browse-btn">Browse Menu</a>
+  </aside>
+
+</main>
+
+<footer class="footer">
+  <div>
+      <img src="logo4.png" alt="BFC Logo" style="width: 150px;">
+    <h3>B.F.C</h3>
+    <p>Bismillah Fried Chicken</p>
+  </div>
+
+  <div>
+    <h4>Quick Links</h4>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div>
+    <h4>Food Categories</h4>
+    <a href="menu.html?category=Fried%20Chicken">Fried Chicken</a>
+    <a href="menu.html?category=Pizza">Pizza</a>
+    <a href="menu.html?category=Burger">Burger</a>
+    <a href="menu.html?category=Sandwich">Sandwich</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>bfcrestaurant@gmail.com</p>
+    <p>+91 9392224164</p>
+    <div class="socials">
+      <span>f</span>
+      <span>𝕏</span>
+      <span>◎</span>
+      <span>▶</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script src="cart-page.js"></script>
+</body>
+</html>

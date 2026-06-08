@@ -1,0 +1,214 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About B.F.C</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo4.png" alt="B.F.C Logo">
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <a href="menu.html" class="order-btn">Order Now</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<main class="about-page">
+
+  <section class="about-hero">
+    <div class="hero-content">
+      <span>🍗 Bismillah Fried Chicken</span>
+      <h1>About B.F.C</h1>
+      <p>Fresh food. Crispy taste. Happy moments.</p>
+      <a href="menu.html" class="hero-btn">Explore Menu</a>
+    </div>
+
+    <img src="logo7.jpeg" alt="BFC fried chicken">
+  </section>
+
+  <section class="story-section">
+    <div class="story-image">
+      <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Restaurant kitchen">
+    </div>
+
+    <div class="story-content">
+      <span>Our Story</span>
+      <h2>Bismillah Fried Chicken</h2>
+      <p>
+        B.F.C is built for people who love fresh, crispy and satisfying food.
+        We prepare every item with care, using quality ingredients and a taste
+        that feels perfect for friends and family.
+      </p>
+      <p>
+        From fried chicken to pizzas, burgers, sandwiches and combos, our goal is
+        simple: serve hot, tasty and affordable food that brings happy moments.
+      </p>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <h2>Why Choose Us</h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span>🥗</span>
+        <h3>Fresh Ingredients</h3>
+        <p>We use fresh ingredients for better taste and quality.</p>
+      </div>
+
+      <div class="why-card">
+        <span>🔥</span>
+        <h3>Signature Crunch</h3>
+        <p>Crispy outside, juicy inside — our special B.F.C style.</p>
+      </div>
+
+      <div class="why-card">
+        <span>💰</span>
+        <h3>Affordable Taste</h3>
+        <p>Premium food experience with pocket-friendly prices.</p>
+      </div>
+
+      <div class="why-card">
+        <span>⏱️</span>
+        <h3>Fast Service</h3>
+        <p>Quick preparation so you can enjoy hot food faster.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <h2>Kitchen Process</h2>
+
+    <div class="timeline">
+      <div class="timeline-card">
+        <span>01</span>
+        <h3>Prepare Fresh</h3>
+        <p>Ingredients are prepared fresh before cooking.</p>
+      </div>
+
+      <div class="timeline-card">
+        <span>02</span>
+        <h3>Cook Perfect</h3>
+        <p>Every item is cooked carefully for perfect flavor.</p>
+      </div>
+
+      <div class="timeline-card">
+        <span>03</span>
+        <h3>Serve Hot</h3>
+        <p>Your food is served hot, crispy and delicious.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div>
+      <img src="logo4.png" alt="BFC Logo" style="width: 150px;">
+    <h3>B.F.C</h3>
+    <p>Bismillah Fried Chicken</p>
+  </div>
+
+  <div>
+    <h4>Quick Links</h4>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div>
+    <h4>Food Categories</h4>
+    <a href="menu.html?category=Fried%20Chicken">Fried Chicken</a>
+    <a href="menu.html?category=Pizza">Pizza</a>
+    <a href="menu.html?category=Burger">Burger</a>
+    <a href="menu.html?category=Sandwich">Sandwich</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>bfcrestaurant@gmail.com</p>
+    <p>+91 9392224164</p>
+    <div class="socials">
+      <span>f</span>
+      <span>𝕏</span>
+      <span>◎</span>
+      <span>▶</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+  const popularGrid = document.getElementById("popularGrid");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+
+  function getLowestPrice(item) {
+    return item.sizes ? item.sizes[0].price : item.price;
+  }
+
+  function renderPopularFoods() {
+    const names = ["Chicken Popcorn", "Chicken Pizza", "Chicken Burger"];
+    const foods = menuItems.filter(item => names.includes(item.name));
+
+    popularGrid.innerHTML = foods.map(item => `
+      <div class="food-card">
+        <img src="${item.image}" alt="${item.name}">
+        <h3>${item.name}</h3>
+        <p>${item.description}</p>
+        <div class="food-bottom">
+          <strong>From ₹${getLowestPrice(item)}</strong>
+          <button onclick="addPopularItem(${item.id})">ADD</button>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  function addPopularItem(id) {
+    const item = menuItems.find(food => food.id === id);
+
+    if (!item) return;
+
+    if (item.sizes) {
+      addToCart(item, item.sizes[0]);
+    } else {
+      addToCart(item);
+    }
+
+    updateCartCount();
+    alert(`${item.name} added to cart`);
+  }
+
+  renderPopularFoods();
+  updateCartCount();
+</script>
+
+</body>
+</html>

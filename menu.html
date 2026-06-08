@@ -1,0 +1,129 @@
+<!-- menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.F.C Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo4.png" alt="B.F.C Logo">
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <a href="checkout.html" class="order-btn">Order</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<div class="offer-ticker">
+  <div class="ticker-track">
+    <span>🔥 Purchase any order above ₹500 and get <strong>FREE</strong> French Fries 🍟</span>
+    <span>🔥 Purchase any order above ₹500 and get <strong>FREE</strong> French Fries 🍟</span>
+    <span>🔥 Purchase any order above ₹500 and get <strong>FREE</strong> French Fries 🍟</span>
+  </div>
+</div>
+
+<main class="menu-wrapper">
+
+  <aside class="category-sidebar">
+    <h3>Categories</h3>
+
+    <button class="cat-btn active" data-category="Popular">🔥 Popular</button>
+    <button class="cat-btn" data-category="Fried Chicken">🍗 Fried Chicken</button>
+    <button class="cat-btn" data-category="Pizza">🍕 Pizza</button>
+    <button class="cat-btn" data-category="Burger">🍔 Burger</button>
+    <button class="cat-btn" data-category="Sandwich">🥪 Sandwich</button>
+    <button class="cat-btn" data-category="Combos">🎉 Combos</button>
+  </aside>
+
+  <section class="menu-center">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="What are you craving today?">
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <div class="section-heading">
+      <h1 id="categoryTitle">Popular Items</h1>
+      <p>Freshly prepared B.F.C favorites</p>
+    </div>
+
+    <div class="food-grid" id="foodGrid"></div>
+  </section>
+
+  <aside class="cart-preview">
+    <h3>My Order</h3>
+
+    <div id="cartItems" class="cart-items">
+      <p class="empty-cart">Your cart is empty</p>
+    </div>
+
+    <div class="subtotal-row">
+      <span>Subtotal</span>
+      <strong id="subtotal">₹0</strong>
+    </div>
+
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+  </aside>
+
+</main>
+
+<div class="size-modal" id="sizeModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">×</button>
+
+    <img id="modalImage" src="" alt="">
+    <h2 id="modalTitle">Choose Size</h2>
+    <p id="modalDesc">Select your preferred size</p>
+
+    <div id="sizeOptions" class="size-options"></div>
+
+    <button id="modalAddBtn" class="modal-add-btn">Add Item</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-logo">
+      <img src="logo4.png" alt="BFC Logo" style="width: 150px;">
+  </div>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="footer-contact">
+    <p>📞 +91 9392224164</p>
+    <p>✉️ bfcrestaurant@gmail.com</p>
+  </div>
+
+  <div class="footer-social">
+    <span>f</span>
+    <span>𝕏</span>
+    <span>◎</span>
+    <span>▶</span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script src="menu.js"></script></body>
+</html>

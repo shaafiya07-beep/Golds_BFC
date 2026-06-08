@@ -1,0 +1,258 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.F.C - Bismillah Fried Chicken</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo4.png" alt="B.F.C Logo">
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a class="active" href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <a href="menu.html" class="order-btn">Order Now</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<main class="main-box">
+
+  <section class="hero">
+    <div class="hero-left">
+      
+
+      <img class="hero-img" src="logo7.jpeg" alt="BFC fried chicken pizza burger">
+    </div>
+
+    <div class="hero-right">
+      <div class="floating-badge fresh">
+        <strong>🌿 Fresh</strong>
+        <span>Everyday</span>
+      </div>
+
+      <div class="floating-badge best">
+        <strong>🏅 Best</strong>
+        <span>Seller</span>
+      </div>
+
+      <h1>Fresh. Crispy. Delicious.</h1>
+      <p>Taste the crunch of B.F.C with freshly prepared chicken, pizzas and burgers.</p>
+
+      <div class="hero-buttons">
+        <a href="menu.html" class="primary-btn">Order Now</a>
+        <a href="menu.html" class="outline-btn">View Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <h2>Food Categories</h2>
+
+    <div class="category-grid">
+      <a href="menu.html?category=Fried%20Chicken" class="category-card active-cat">
+        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=500&q=80" alt="Fried Chicken">
+        <h3>Fried Chicken</h3>
+      </a>
+
+      <a href="menu.html?category=Pizza" class="category-card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+        <h3>Pizza</h3>
+      </a>
+
+      <a href="menu.html?category=Burger" class="category-card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80" alt="Burger">
+        <h3>Burgers</h3>
+      </a>
+
+      <a href="menu.html?category=Sandwich" class="category-card">
+        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=500&q=80" alt="Sandwich">
+        <h3>Sandwiches</h3>
+      </a>
+
+      <a href="menu.html?category=Combos" class="category-card">
+        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=500&q=80" alt="Combos">
+        <h3>Family Combos</h3>
+      </a>
+    </div>
+  </section>
+
+  <section class="popular">
+    <h2>Popular Items</h2>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=500&q=80" alt="Chicken Popcorn">
+        <h3>Chicken Popcorn</h3>
+        <p>Regular • 120gm</p>
+        <div>
+          <strong>₹100</strong>
+          <button onclick="goToMenuCategory('Fried Chicken')">ADD</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=500&q=80" alt="Crispy Wings">
+        <h3>Crispy Wings</h3>
+        <p>Regular • 5 pcs</p>
+        <div>
+          <strong>₹100</strong>
+          <button onclick="goToMenuCategory('Fried Chicken')">ADD</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Chicken Pizza">
+        <h3>Chicken Pizza</h3>
+        <p>Small</p>
+        <div>
+          <strong>₹150</strong>
+          <button onclick="goToMenuCategory('Pizza')">ADD</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80" alt="Chicken Burger">
+        <h3>Chicken Burger</h3>
+        <p>Fresh chicken patty</p>
+        <div>
+          <strong>₹100</strong>
+          <button onclick="goToMenuCategory('Burger')">ADD</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="family-banner">
+    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80" alt="Family restaurant food">
+  </section>
+
+  <section class="offers">
+    <h2>Special Offers</h2>
+
+    <div class="offer-grid">
+      <div class="offer-card">
+        <h3>Combo 1</h3>
+        <p>Crispy chicken combo</p>
+        <strong>₹299</strong>
+        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=500&q=80" alt="Combo 1">
+      </div>
+
+      <div class="offer-card">
+        <h3>Combo 2</h3>
+        <p>Pizza combo meal</p>
+        <strong>₹399</strong>
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Combo 2">
+      </div>
+
+      <div class="offer-card">
+        <h3>Combo 3</h3>
+        <p>Family feast combo</p>
+        <strong>₹499</strong>
+        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=500&q=80" alt="Combo 3">
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <h2>Why BFC</h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span>🥗</span>
+        <h3>Fresh Ingredients</h3>
+        <p>Fresh ingredients and healthy preparation.</p>
+      </div>
+
+      <div class="why-card">
+        <span>🍴</span>
+        <h3>Crispy Recipe</h3>
+        <p>Secret crispy taste with rich flavor.</p>
+      </div>
+
+      <div class="why-card">
+        <span>⏱️</span>
+        <h3>Fast Service</h3>
+        <p>Quick service without compromising taste.</p>
+      </div>
+
+      <div class="why-card">
+        <span>💰</span>
+        <h3>Affordable Price</h3>
+        <p>Great food at pocket-friendly prices.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <footer class="footer">
+    <div>
+      <img src="logo4.png" alt="BFC Logo" style="width: 150px;">
+      <h3>Gold's B.F.C</h3>
+      <p>Bismillah Fried Chicken</p>
+    </div>
+
+    <div>
+      <h4>Food Categories</h4>
+      <a href="menu.html?category=Fried%20Chicken">Fried Chicken</a>
+      <a href="menu.html?category=Pizza">Pizza</a>
+      <a href="menu.html?category=Burger">Burgers</a>
+      <a href="menu.html?category=Sandwich">Sandwiches</a>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="offers.html">Offers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>bfcrestaurant@gmail.com</p>
+      <p>+91 9392224164</p>
+      <p>10:00 AM - 10:00 PM</p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+
+  function goToMenuCategory(category) {
+    window.location.href = `menu.html?category=${encodeURIComponent(category)}`;
+  }
+
+  updateCartCount();
+</script>
+
+</body>
+</html>

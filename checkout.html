@@ -1,0 +1,201 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.F.C Checkout</title>
+
+  <link rel="stylesheet" href="checkout.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo4.png" alt="B.F.C Logo">
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <a href="menu.html" class="order-btn">Order Now</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<main class="checkout-page">
+
+  <section class="checkout-left">
+    <div class="checkout-heading">
+      <span>🍗 Secure WhatsApp Order</span>
+      <h1>Checkout</h1>
+      <p>Complete your order. Your order goes directly to B.F.C on WhatsApp.</p>
+    </div>
+
+    <div id="emptyCheckout" class="empty-checkout">
+      <div class="empty-icon">🛒</div>
+      <h2>No items selected</h2>
+      <p>Please add food items before checkout.</p>
+      <a href="menu.html">Go to Menu</a>
+    </div>
+
+    <form id="checkoutForm" class="checkout-form">
+      <h2>Customer Details</h2>
+
+      <div class="form-group">
+        <label>Customer Name</label>
+        <input type="text" id="customerName" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="customerPhone" placeholder="Enter phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label>Delivery Address</label>
+        <textarea id="customerAddress" placeholder="Flat / House no, street, area" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Delivery Location</label>
+
+        <button type="button" class="location-btn" id="openMapBtn">
+          📍 Select Delivery Location
+        </button>
+
+        <p class="location-status" id="locationStatus">
+          Location not selected
+        </p>
+
+        <input type="hidden" id="customerLocationLink">
+      </div>
+
+      <div class="form-group">
+        <label>Landmark</label>
+        <input type="text" id="customerLandmark" placeholder="Nearby landmark" required>
+      </div>
+
+      <div class="payment-box">
+        <label>Payment Method</label>
+
+        <div class="radio-row">
+          <label>
+            <input type="radio" name="payment" value="Cash On Delivery" required>
+            Cash On Delivery
+          </label>
+
+          <label>
+            <input type="radio" name="payment" value="UPI" required>
+            UPI
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="place-order-btn">Place Order on WhatsApp</button>
+    </form>
+  </section>
+
+  <aside class="summary-card">
+    <div class="whatsapp-preview">
+      <span>💬</span>
+      <div>
+        <h3>Your order goes directly to B.F.C</h3>
+        <p>We will receive your order details and exact map location.</p>
+      </div>
+    </div>
+
+    <h2>Order Summary</h2>
+
+    <div id="summaryItems" class="summary-items">
+      <p class="empty-summary">No items selected</p>
+    </div>
+
+    <div class="summary-total">
+      <span>Total</span>
+      <strong id="summaryTotal">₹0</strong>
+    </div>
+  </aside>
+
+</main>
+
+<div class="map-modal" id="mapModal">
+  <div class="map-modal-box">
+    <button class="map-close" id="closeMapBtn">×</button>
+
+    <h2>Select Delivery Location</h2>
+    <p>Search your area or drag the pin to your exact house location.</p>
+
+    <div class="map-search">
+      <input
+        type="text"
+        id="locationSearch"
+        placeholder="Search location, area or landmark..."
+      >
+      <button type="button" id="searchLocationBtn">Search</button>
+    </div>
+
+    <div id="deliveryMap"></div>
+
+    <button type="button" class="confirm-location-btn" id="confirmLocationBtn">
+      Confirm Location
+    </button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div>
+    <img src="logo4.png" alt="BFC Logo" style="width: 150px;">
+    <h3>B.F.C</h3>
+    <p>Bismillah Fried Chicken</p>
+  </div>
+
+  <div>
+    <h4>Quick Links</h4>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div>
+    <h4>Food Categories</h4>
+    <a href="menu.html?category=Fried%20Chicken">Fried Chicken</a>
+    <a href="menu.html?category=Pizza">Pizza</a>
+    <a href="menu.html?category=Burger">Burger</a>
+    <a href="menu.html?category=Sandwich">Sandwich</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>bfcrestaurant@gmail.com</p>
+    <p>+91 93922241640</p>
+    <div class="socials">
+      <span>f</span>
+      <span>𝕏</span>
+      <span>◎</span>
+      <span>▶</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="cart.js"></script>
+<script src="checkout.js"></script>
+
+</body>
+</html>

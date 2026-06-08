@@ -1,0 +1,222 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact B.F.C</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo4.png" alt="B.F.C Logo">
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      🛒 <span id="cartCount">0</span>
+    </button>
+    <a href="menu.html" class="order-btn">Order Now</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<main class="contact-page">
+
+  <section class="contact-hero">
+    <div class="hero-content">
+      <span>📞 Get in touch</span>
+      <h1>Contact B.F.C</h1>
+      <p>We are ready to serve fresh, crispy and delicious food for you.</p>
+      <a href="#contactForm" class="hero-btn">Send Message</a>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?auto=format&fit=crop&w=900&q=80" alt="Restaurant food">
+  </section>
+
+  <section class="contact-cards">
+    <div class="contact-card">
+      <span>📞</span>
+      <h3>Phone</h3>
+      <p>+91 9392224164</p>
+    </div>
+
+    <div class="contact-card">
+      <span>💬</span>
+      <h3>WhatsApp</h3>
+      <p>Chat with us directly</p>
+    </div>
+
+    <div class="contact-card">
+      <span>✉️</span>
+      <h3>Email</h3>
+      <p>bfcrestaurant@gmail.com</p>
+    </div>
+
+    <div class="contact-card">
+      <span>📍</span>
+      <h3>Location</h3>
+      <p>Vijayawada, Andhra Pradesh</p>
+    </div>
+
+    <div class="contact-card">
+      <span>⏰</span>
+      <h3>Opening Hours</h3>
+      <p>10:00 AM - 10:00 PM</p>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="form-info">
+      <span>🍗 Message B.F.C</span>
+      <h2>Send Your Message</h2>
+      <p>Fill this form and it will open WhatsApp with your message ready to send.</p>
+
+      <div class="info-box">
+        <strong>Fast response</strong>
+        <p>For orders, party bookings or food questions, WhatsApp is the fastest way.</p>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="message" placeholder="Write your message" required></textarea>
+      </div>
+
+      <button type="submit">Open WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="location-section">
+    <h2>Our Location</h2>
+
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps?q=Vijayawada%20Andhra%20Pradesh&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you deliver?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, we accept delivery orders through WhatsApp and phone based on your location.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Payment options?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We support Cash on Delivery and UPI payment options.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Party orders?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, you can contact us for birthday parties, family events and bulk food orders.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Opening timings?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We are open from 10:00 AM to 10:00 PM every day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Food Gallery</h2>
+
+    <div class="gallery-grid">
+      <img src="strips.jpg" alt="Fried chicken">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Pizza">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Burger">
+      <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80" alt="Sandwich">
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div>
+      <img src="logo4.png" alt="BFC Logo" style="width: 150px;">
+    <h3>B.F.C</h3>
+    <p>Bismillah Fried Chicken</p>
+  </div>
+
+  <div>
+    <h4>Quick Links</h4>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="offers.html">Offers</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div>
+    <h4>Food Categories</h4>
+    <a href="menu.html?category=Fried%20Chicken">Fried Chicken</a>
+    <a href="menu.html?category=Pizza">Pizza</a>
+    <a href="menu.html?category=Burger">Burger</a>
+    <a href="menu.html?category=Sandwich">Sandwich</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>bfcrestaurant@gmail.com</p>
+    <p>+91 9392224164</p>
+    <div class="socials">
+      <span>f</span>
+      <span>𝕏</span>
+      <span>◎</span>
+      <span>▶</span>
+    </div>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="contact.js"></script>
+
+</body>
+</html>
