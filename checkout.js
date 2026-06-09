@@ -22,7 +22,7 @@ const locationStatus = document.getElementById("locationStatus");
 const locationSearch = document.getElementById("locationSearch");
 const searchLocationBtn = document.getElementById("searchLocationBtn");
 
-const BFC_WHATSAPP_PHONE = "918309073135";
+const BFC_WHATSAPP_PHONE = "919392224164";
 const DELIVERY_CHARGE = 30;
 
 let deliveryMap = null;
