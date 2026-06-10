@@ -22,7 +22,7 @@ const locationStatus = document.getElementById("locationStatus");
 const locationSearch = document.getElementById("locationSearch");
 const searchLocationBtn = document.getElementById("searchLocationBtn");
 
-const BFC_WHATSAPP_PHONE = "919392224164";
+const BFC_WHATSAPP_PHONE = "9193922241640";
 const DELIVERY_CHARGE = 30;
 
 let deliveryMap = null;
@@ -269,7 +269,7 @@ function validateForm() {
   const locationLink = CUSTOMER_LOCATION_LINK.value.trim();
   const payment = document.querySelector('input[name="payment"]:checked');
 
-  if (!name || !phone || !address || !landmark || !payment) {
+  if (!name || !phone || !address || !payment) {
     alert("Please fill all required fields.");
     return false;
   }
@@ -298,56 +298,59 @@ function createWhatsAppMessage() {
   const payment = document.querySelector('input[name="payment"]:checked').value;
 
   const orderItems = cart.map((item, index) => {
-    const sizeText = item.size ? ` ${item.size}` : "";
-    const priceText = item.price === 0 ? "FREE" : `₹${item.price * item.quantity}`;
+    const sizeText = item.size ? ` (${item.size})` : "";
 
-    return `${index + 1}. ${item.name}${sizeText}
+    const priceText =
+      item.price === 0
+        ? "FREE"
+        : `₹${item.price * item.quantity}`;
 
-Qty: ${item.quantity}
-
-${priceText}`;
+    return `${index + 1}️⃣ ${item.name}${sizeText}
+• Qty: ${item.quantity}
+• Price: ${priceText}`;
   }).join("\n\n");
 
-  return `New B.F.C Order 🍗
+  return `🍗 NEW B.F.C ORDER
 
-Customer Details:
+━━━━━━━━━━━━━━
+👤 CUSTOMER DETAILS
+━━━━━━━━━━━━━━
 
-Name:
-${name}
+Name: ${name}
+Phone: ${phone}
 
-Phone:
-${phone}
-
-Address:
+📍 Delivery Address:
 ${address}
 
-Landmark:
+${landmark ? `📌 Landmark:
 ${landmark}
 
-Location:
+` : ""}📍 Map Location:
 ${locationLink}
 
-Order Items:
+━━━━━━━━━━━━━━
+🛒 ORDER ITEMS
+━━━━━━━━━━━━━━
 
 ${orderItems}
 
-Food Total:
+━━━━━━━━━━━━━━
+💰 BILL SUMMARY
+━━━━━━━━━━━━━━
 
-₹${getCartTotal()}
+Food Total      : ₹${getCartTotal()}
+Delivery Charge : ₹${DELIVERY_CHARGE}
 
-Delivery Charge:
+Grand Total     : ₹${getFinalTotal()}
 
-₹${DELIVERY_CHARGE}
+━━━━━━━━━━━━━━
+💳 PAYMENT
+━━━━━━━━━━━━━━
 
-Grand Total:
+${payment}
 
-₹${getFinalTotal()}
-
-Payment:
-
-${payment}`;
+Thank you for ordering from B.F.C ❤️`;
 }
-
 checkoutForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
