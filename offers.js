@@ -13,14 +13,14 @@ const offers = [
     name: "Fried Combo 2",
     items: ["Chicken Popcorn Medium", "Chicken Lolipop 4 pcs", "Boneless Strips 4 pcs"],
     price: 409,
-    image: "https://images.pexels.com/photos/6941010/pexels-photo-6941010.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/6941026/pexels-photo-6941026.jpeg"
   },
   {
     id: "offer3",
     name: "Fried Combo 3",
     items: ["Chicken Popcorn Medium", "Crispy Fried Chicken 4 pcs", "Crispy Wings 4 pcs"],
     price: 509,
-    image: "https://images.pexels.com/photos/13999297/pexels-photo-13999297.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.unsplash.com/photo-1608039755401-742074f0548d"
   },
   {
     id: "offer4",
@@ -34,7 +34,7 @@ const offers = [
     name: "Fried Combo 5",
     items: ["Boneless Strips 8 pcs", "Crispy Fried Chicken 4 pcs", "Chicken Lolipop 8 pcs", "Crispy Wings 4 pcs"],
     price: 999,
-    image: "https://images.pexels.com/photos/6941010/pexels-photo-6941010.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg"
   },
   {
     id: "offer6",
