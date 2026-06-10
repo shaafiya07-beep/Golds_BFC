@@ -4,7 +4,7 @@ const navLinks = document.getElementById("navLinks");
 const contactForm = document.getElementById("contactForm");
 const faqItems = document.querySelectorAll(".faq-item");
 
-const WHATSAPP_NUMBER = "918309073135";
+const WHATSAPP_NUMBER = "919392224164";
 
 if (hamburger && navLinks) {
   hamburger.addEventListener("click", () => {
