@@ -39,7 +39,15 @@ const IMAGE_LIBRARY = {
   fries:
     "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=800",
   combo:
-    "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800"
+    "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800",
+    shawarma:
+  "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800&h=800&fit=crop",
+
+waffle:
+  "https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=800&h=800&fit=crop",
+
+momos:
+  "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=800&h=800&fit=crop",
 };
 
 function getSmartImage(name, category) {
@@ -60,10 +68,14 @@ function getSmartImage(name, category) {
   if (text.includes("burger")) return IMAGE_LIBRARY.burger;
 
   if (text.includes("sandwich")) return IMAGE_LIBRARY.sandwich;
-  if (text.includes("fries")) return IMAGE_LIBRARY.fries;
-  if (text.includes("combo")) return IMAGE_LIBRARY.combo;
+if (text.includes("fries")) return IMAGE_LIBRARY.fries;
+if (text.includes("combo")) return IMAGE_LIBRARY.combo;
 
-  return DEFAULT_FOOD_IMAGE;
+if (text.includes("shawarma")) return IMAGE_LIBRARY.shawarma;
+if (text.includes("waffle")) return IMAGE_LIBRARY.waffle;
+if (text.includes("momos")) return IMAGE_LIBRARY.momos;
+
+return DEFAULT_FOOD_IMAGE;
 }
 
 function cleanImageUrl(image, name = "", category = "") {
