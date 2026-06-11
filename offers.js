@@ -5,7 +5,7 @@ const offers = [
     id: "offer1",
     name: "Fried Combo 1",
     items: ["Chicken Popcorn Regular", "Crispy Wings 5 pcs", "Crispy Fried Chicken 2 pcs"],
-    price: 209,
+    price: 309,
     image: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
