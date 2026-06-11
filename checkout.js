@@ -269,7 +269,7 @@ function validateForm() {
   const locationLink = CUSTOMER_LOCATION_LINK.value.trim();
   const payment = document.querySelector('input[name="payment"]:checked');
 
-  if (!name || !phone || !address || !payment) {
+  if (!name || !phone || !payment) {
     alert("Please fill all required fields.");
     return false;
   }
